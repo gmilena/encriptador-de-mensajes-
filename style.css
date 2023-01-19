@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap"); /*  font-family: 'Oswald', sans-serif;  */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"); /*  font-family: 'Roboto Mono', monospace;*/
+
+:root {
+  --font-title: "Oswald", sans-serif;
+  --font-main: "Roboto Mono", monospace;
+  --BKCOLOR: #101010;
+  --BOXCOLOR: #d8d8d8;
+  --TXTCOLOR: #070707;
+  --TCOLOR: #d8d8d8;
+  --MENSAJES: #c70039;
+  --A-COLOR: #ff316c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  border: 2px solid var(--BOXCOLOR);
+}
+
+body {
+  font-family: var(--font-main);
+  min-height: 100%;
+  background-color: var(--BKCOLOR);
+}
+
+.conteiner > * {
+  text-align: center;
+  padding: 10px;
+  min-height: 100%;
+}
+
+.conteiner {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template:
+    "header header" 15%
+    "main main" auto
+    "footer footer" 10%;
+}
+
+.header {
+  background-color: transparent;
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--TCOLOR);
+  border-bottom: 2px solid var(--BOXCOLOR);
+}
+
+.main {
+  background-color: var(--BKCOLOR);
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.footer {
+  bottom: 0;
+  background-color: transparent;
+  grid-area: footer;
+  font-size: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--TCOLOR);
+  border-top: 2px solid var(--BOXCOLOR);
+}
+
+h1 {
+  display: flex;
+  font-size: 1.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  height: auto;
+  text-transform: uppercase;
+  font-family: var(--font-title);
+}
+.titulo {
+  align-self: center;
+  letter-spacing: 1px;
+  animation: glitch infinite 5s alternate-reverse;
+  overflow: hidden;
+}
+
+.caja-izquierda {
+  display: flex;
+  flex-direction: column;
+  height: 45%;
+  background-color: var(--BOXCOLOR);
+  color: var(--TXTCOLOR);
+  overflow: hidden;
+}
+
+#error-mensaje {
+  font-family: var(--font-title);
+  color: var(--MENSAJES);
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+#no-hay-mensaje {
+  font-family: var(--font-title);
+  color: var(--MENSAJES);
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+.msj-no-encontrado {
+  display: flex;
+  position: relative;
+  top: 15%;
+  align-self: center;
+  flex-direction: column;
+  font-size: 2rem;
+  color: var(--TCOLOR);
+  font-family: var(--font-title);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.glitch-contenedor {
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+}
+span.glitch {
+  font-family: var(--font-title);
+  display: flex;
+  text-transform: uppercase;
+  animation: glitch infinite 2s alternate-reverse;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+#texto {
+  resize: none;
+  font-size: 1rem;
+  height: 80%;
+  border: none;
+  outline: none;
+  background-color: var(--BOXCOLOR);
+  color: var(--TXTCOLOR);
+  padding: 4%;
+  font-family: var(--font-main);
+}
+::placeholder {
+  color: var(--BKCOLOR);
+  font-family: var(--font-main);
+}
+
+.botones {
+  margin: 2%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--BOXCOLOR);
+}
+
+.btn {
+  padding: 2%;
+  width: 40%;
+  font-weight: bolder;
+  font-family: var(--font-title);
+  color: var(--TCOLOR);
+  letter-spacing: 1px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: var(--BKCOLOR);
+  font-size: 1rem;
+}
+
+button:hover {
+  animation: glitch 600ms infinite 700ms alternate-reverse;
+  color: var(--BKCOLOR);
+  background-color: var(--TCOLOR);
+  outline: 2px solid var(--BKCOLOR);
+}
+
+.caja-derecha {
+  display: flex;
+  flex-direction: column;
+  height: 45%;
+  background-color: var(--BKCOLOR);
+}
+
+#texto2 {
+  resize: none;
+  font-size: 1rem;
+  height: 80%;
+  padding: 7%;
+  background-color: var(--BKCOLOR);
+  outline: none;
+  border: none;
+  color: var(--TCOLOR);
+  font-family: var(--font-main);
+  overflow: hidden;
+}
+#btn-copiar-reiniciar {
+  background-color: var(--BKCOLOR);
+}
+#copiar,
+#reiniciar {
+  background: var(--BOXCOLOR);
+  outline: 2px solid var(--BOXCOLOR);
+  color: var(--TXTCOLOR);
+}
+#copiar:hover {
+  background-color: var(--BKCOLOR);
+  color: var(--TCOLOR);
+}
+#reiniciar:hover {
+  background-color: var(--BKCOLOR);
+  color: var(--TCOLOR);
+}
+#texto-copiado {
+  font-family: var(--font-title);
+  color: #29c7ac;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-main);
+  letter-spacing: 2.3px;
+}
+h3 {
+  animation: blink 0.7s infinite alternate;
+  border-right: 4px solid;
+  font-size: 0.93em;
+  font-weight: lighter;
+  letter-spacing: 0px;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(108, 140, 255);
+  font-weight: bolder;
+}
+a:link {
+  color: var(--A-COLOR);
+}
+a:hover {
+  color: var(--A-COLOR);
+  border-bottom: 2px solid var(--A-COLOR);
+}
+a:active {
+  background-color: var(--BOXCOLOR);
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1500px) {
+  .main {
+    grid-area: main;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .header {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 3.5%;
+  }
+  h1 {
+    height: auto;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+
+  .caja-izquierda {
+    height: 100%;
+    width: 60%;
+  }
+  .caja-derecha {
+    height: 100%;
+    width: 40%;
+  }
+  .botones {
+    height: 30%;
+    padding: 2%;
+  }
+
+  #error-mensaje,
+  #textocopiado,
+  #no-hay-mensaje,
+  #texto-copiado {
+    font-size: 1.2rem;
+  }
+
+  #texto,
+  #texto2 {
+    padding: 8%;
+    font-size: 1.3rem;
+  }
+  #mensaje-no-encontrado {
+    margin-top: 15%;
+    font-size: 2rem;
+  }
+  span.glitch {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.2em;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+  }
+  2% {
+    text-shadow: 2px -2px 0 red, -1px 3px 0 blue;
+  }
+  4% {
+    text-shadow: -1px 2px 0 red, 1px -2px 0 rgb(0, 255, 68);
+  }
+  6% {
+    text-shadow: -1px 2px 0 rgb(255, 0, 212), 1px -2px 0 rgb(68, 208, 255);
+  }
+  8%,
+  100% {
+    text-shadow: none;
+    transform: none;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
