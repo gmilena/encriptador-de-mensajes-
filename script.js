@@ -51,7 +51,7 @@ function validarMensaje(text) {
 function encriptar(text) {
   let mensajeEncriptado = text;
   remplazarLetras.forEach(({letter, replacement}) => {
-    mensajeEncriptado = mensajeEncriptado.replace(letter, replacement);
+    mensajeEncriptado = mensajeEncriptado.replaceAll(letter, replacement);
   });
   elementos.resultado.style.display = "flex";
   return mensajeEncriptado;
@@ -61,7 +61,7 @@ function encriptar(text) {
 function desencriptar(text) {
   let mensajeDesencriptado = text;
   remplazarLetras.forEach(({letter, replacement}) => {
-    mensajeDesencriptado = mensajeDesencriptado.replace(
+    mensajeDesencriptado = mensajeDesencriptado.replaceAll(
       replacement,
       letter.source
     );
@@ -101,7 +101,7 @@ elementos.btnEncriptar.addEventListener("click", () => {
 
 // BOTON DESENCRIPTAR //
 elementos.btnDesencriptar.addEventListener("click", () => {
-  const mensaje = elementos.resultado.value;
+  const mensaje = elementos.mensaje.value;
   if (validarMensaje(mensaje)) {
     elementos.resultado.value = desencriptar(mensaje);
     elementos.mensaje.value = "";
