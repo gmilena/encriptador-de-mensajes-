@@ -1,17 +1,22 @@
-# ENCRIPTADOR DE MENSAJES - ALURA
+# Encriptador de Mensajes
 
-Requisitos:
+Este proyecto es una aplicación web simple que te permite encriptar y desencriptar mensajes utilizando un conjunto específico de reglas de reemplazo de caracteres. Está construido con HTML, CSS y JavaScript.
 
-- Debe funcionar solo con letras minúsculas
-- No deben ser utilizados letras con acentos ni caracteres especiales
-- Debe ser posible convertir una palabra para la versión encriptada también devolver una palabra encriptada para su versión original.
+## Descripción
 
-Por ejemplo:
-"gato" => "gaitober"
-gaitober" => "gato"
+El Encriptador de Mensajes toma un texto de entrada y lo transforma según las siguientes reglas:
+- Las letras "e" se reemplazan por "enter".
+- Las letras "o" se reemplazan por "ober".
+- Las letras "i" se reemplazan por "imes".
+- Las letras "a" se reemplazan por "ai".
+- Las letras "u" se reemplazan por "ufat".
 
-La página debe tener campos para inserción del texto que será encriptado o desencriptado, y el usuario debe poder escoger entre as dos opciones. El resultado debe ser mostrado en la pantalla.
+También puedes desencriptar mensajes que hayan sido encriptados con estas reglas.
 
-Extras:
+## Características
 
-- Un botón que copie el texto encriptado/desencriptado para la sección de transferencia, o sea que tenga la misma funcionalidad del ctrl+C o de la opción "copiar" del menú de las aplicaciones.
+- Encriptar mensajes utilizando reglas específicas de reemplazo.
+- Desencriptar mensajes previamente encriptados.
+- Validación de texto para asegurar que solo se ingresen letras minúsculas sin caracteres especiales.
+- Copiar el mensaje encriptado/desencriptado al portapapeles.
+- Reiniciar el texto de entrada y salida.
